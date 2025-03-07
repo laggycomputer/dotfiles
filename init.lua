@@ -31,5 +31,11 @@ lspconfig['lua_ls'].setup {
     capabilities = capabilities
 }
 
-lspconfig['rust_analyzer'].setup{}
+lspconfig['rust_analyzer'].setup{
+    on_attach = function(client, bufnr)
+        if client.server_capabilities.inlayHintProvider then
+            vim.lsp.inlay_hint.enable(true, {bufnr = bufnr})
+        end
+    end,
+}
 
