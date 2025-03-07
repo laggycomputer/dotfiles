@@ -6,6 +6,7 @@ local opts = {
         'query',
         'markdown',
         'markdown_inline',
+        'rust',
     },
 }
 
