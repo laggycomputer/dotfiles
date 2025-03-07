@@ -86,3 +86,13 @@ lspconfig['rust_analyzer'].setup{
     }
 }
 
+lspconfig.pylyzer.setup({
+    settings = {
+        python = {
+          checkOnType = true,
+          diagnostics = true,
+          inlayHints = true,
+          smartCompletion = true,
+        }
+    }
+})

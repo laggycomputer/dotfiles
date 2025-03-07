@@ -7,6 +7,7 @@ local opts = {
         'markdown',
         'markdown_inline',
         'rust',
+        'python',
     },
 }
 
