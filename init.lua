@@ -37,7 +37,7 @@ lspconfig['rust_analyzer'].setup{
             vim.defer_fn(function()
                 -- print("enabling inlay on on", bufnr)
                 vim.lsp.inlay_hint.enable(true, {bufnr=bufnr})
-            end, 5000)
+            end, 1500)
         end
     end,
     settings = {
@@ -73,6 +73,9 @@ lspconfig['rust_analyzer'].setup{
                     hideClosureInitialization = false,
                     hideNamedConstructor = false,
                 },
+            },
+            cargo = {
+                allFeatures = true
             },
         }
     }
