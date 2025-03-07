@@ -15,6 +15,11 @@ return {
 
         end
     },
-    "williamboman/mason-lspconfig.nvim",
+    {
+        "williamboman/mason-lspconfig.nvim",
+        setup = function()
+            require("mason-lspconfig").setup()
+        end
+    },
     "neovim/nvim-lspconfig",
 }
