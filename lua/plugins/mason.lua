@@ -21,5 +21,4 @@ return {
             require("mason-lspconfig").setup()
         end
     },
-    "neovim/nvim-lspconfig",
 }
