@@ -34,8 +34,47 @@ lspconfig['lua_ls'].setup {
 lspconfig['rust_analyzer'].setup{
     on_attach = function(client, bufnr)
         if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable(true, {bufnr = bufnr})
+            vim.defer_fn(function()
+                -- print("enabling inlay on on", bufnr)
+                vim.lsp.inlay_hint.enable(true, {bufnr=bufnr})
+            end, 5000)
         end
     end,
+    settings = {
+        ["rust-analyzer"] = {
+            inlayHints = {
+                bindingModeHints = {
+                    enable = true,
+                },
+                chainingHints = {
+                    enable = true,
+                },
+                closingBraceHints = {
+                    enable = true,
+                    minLines = 25,
+                },
+                closureReturnTypeHints = {
+                    enable = "always",
+                },
+                lifetimeElisionHints = {
+                    enable = "never",
+                    useParameterNames = false,
+                },
+                maxLength = 25,
+                parameterHints = {
+                    enable = true,
+                },
+                reborrowHints = {
+                    enable = "never",
+                },
+                renderColons = true,
+                typeHints = {
+                    enable = true,
+                    hideClosureInitialization = false,
+                    hideNamedConstructor = false,
+                },
+            },
+        }
+    }
 }
 
