@@ -75,7 +75,15 @@ return {
                         inlayHints = true,
                         smartCompletion = true,
                     }
-                }
+                },
+                on_attach = function(client, bufnr)
+                    if client.server_capabilities.inlayHintProvider then
+                        vim.defer_fn(function()
+                            -- print("enabling inlay on on", bufnr)
+                            vim.lsp.inlay_hint.enable(true, {bufnr=bufnr})
+                        end, 1500)
+                    end
+                end, 
             })
         end
     }
