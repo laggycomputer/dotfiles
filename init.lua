@@ -20,4 +20,7 @@ vim.opt.spell = false
 vim.opt.backupdir = "~/.cache/vim"
 vim.opt.signcolumn = 'auto'
 vim.opt.updatetime = 100
+vim.opt.backup = true
+vim.opt.writebackup = true
+vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup//"
 
