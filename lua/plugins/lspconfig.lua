@@ -85,6 +85,14 @@ return {
                     end
                 end, 
             })
+
+            lspconfig["tinymist"].setup {
+                settings = {
+                    formatterMode = "typstyle",
+                    exportPdf = "onType",
+                    semanticTokens = "disable"
+                }
+            }
         end
     }
 }

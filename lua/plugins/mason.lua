@@ -12,8 +12,12 @@ return {
                     },
                 }
             })
-
-        end
+        end,
+        opts = {
+            ensure_installed = {
+                "tinymist",
+            },
+        },
     },
     {
         "williamboman/mason-lspconfig.nvim",
