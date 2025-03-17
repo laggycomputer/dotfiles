@@ -13,16 +13,18 @@ return {
                 }
             })
         end,
-        opts = {
-            ensure_installed = {
-                "tinymist",
-            },
-        },
     },
     {
         "williamboman/mason-lspconfig.nvim",
         setup = function()
-            require("mason-lspconfig").setup()
-        end
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "lua-language-server",
+                    "rust-analyzer",
+                    "tinymist",
+                },
+                automatic_installation = true,
+            })
+        end,
     },
 }
