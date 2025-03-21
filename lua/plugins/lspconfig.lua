@@ -83,7 +83,7 @@ return {
                             vim.lsp.inlay_hint.enable(true, {bufnr=bufnr})
                         end, 1500)
                     end
-                end, 
+                end,
             })
 
             lspconfig["tinymist"].setup {
