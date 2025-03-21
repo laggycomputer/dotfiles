@@ -1,7 +1,7 @@
 return {
     {
         "williamboman/mason.nvim",
-        setup = function()
+        config = function()
             -- Mason Setup
             require("mason").setup({
                 ui = {
