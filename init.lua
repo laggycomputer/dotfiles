@@ -26,9 +26,18 @@ vim.opt.backup = true
 vim.opt.writebackup = true
 vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup//"
 
+local telescope_builtin = require("telescope.builtin")
+
 require("which-key").register({
     ["<leader>c"] = {
         name = "+code",
         a = { vim.lsp.buf.code_action, "Code Action" },
-    }
+    },
+    ["<leader>f"] = {
+        name = "telescope",
+        f = { telescope_builtin.find_files, "telescope find files" },
+        g = { telescope_builtin.live_grep, "telescope live grep" },
+        b = { telescope_builtin.buffers, "telescope buffers" },
+        h = { telescope_builtin.help_tags, "telescope help tags" },
+    },
 })
