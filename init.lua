@@ -27,5 +27,8 @@ vim.opt.writebackup = true
 vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup//"
 
 require("which-key").register({
-    ["<leader>ca"] = { vim.lsp.buf.code_action, "Code Action" },
+    ["<leader>c"] = {
+        name = "+code",
+        a = { vim.lsp.buf.code_action, "Code Action" },
+    }
 })
