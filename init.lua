@@ -26,6 +26,8 @@ vim.opt.backup = true
 vim.opt.writebackup = true
 vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup//"
 
+vim.cmd([[colorscheme habamax]])
+
 local telescope_builtin = require("telescope.builtin")
 
 require("which-key").register({
