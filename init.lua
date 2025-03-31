@@ -34,6 +34,7 @@ require("which-key").register({
     ["<leader>c"] = {
         name = "+code",
         a = { vim.lsp.buf.code_action, "Code Action" },
+        d = { vim.lsp.buf.definition, "go to declaration" },
     },
     ["<leader>f"] = {
         name = "telescope",
