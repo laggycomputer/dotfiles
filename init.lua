@@ -25,6 +25,7 @@ vim.opt.updatetime = 100
 vim.opt.backup = true
 vim.opt.writebackup = true
 vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup//"
+vim.opt.mouse = "a"
 
 vim.cmd([[colorscheme habamax]])
 
