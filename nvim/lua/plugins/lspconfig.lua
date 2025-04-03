@@ -5,7 +5,7 @@ return {
         event = "BufReadPre",
         config = function()
             -- Set up lspconfig.
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+            local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
             -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
             local lspconfig = require('lspconfig')
@@ -20,6 +20,7 @@ return {
             }
 
             lspconfig['rust_analyzer'].setup{
+                capabilities = capabilities,
                 on_attach = function(client, bufnr)
                     if client.server_capabilities.inlayHintProvider then
                         vim.defer_fn(function()
@@ -70,6 +71,7 @@ return {
             }
 
             lspconfig.pylyzer.setup({
+                capabilities = capabilities,
                 settings = {
                     python = {
                         checkOnType = true,
@@ -89,6 +91,7 @@ return {
             })
 
             lspconfig["tinymist"].setup {
+                capabilities = capabilities,
                 settings = {
                     formatterMode = "typstyle",
                     exportPdf = "onType",
@@ -96,7 +99,9 @@ return {
                 }
             }
 
-            lspconfig.clangd.setup{}
+            lspconfig.clangd.setup {
+                capabilities = capabilities,
+            }
         end
     }
 }
