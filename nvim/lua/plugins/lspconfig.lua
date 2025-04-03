@@ -2,6 +2,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         dependencies = { "mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp" },
+        event = "BufReadPre",
         config = function()
             -- Set up lspconfig.
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -94,6 +95,8 @@ return {
                     semanticTokens = "disable"
                 }
             }
+
+            lspconfig.clangd.setup{}
         end
     }
 }
