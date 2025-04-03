@@ -23,6 +23,7 @@ return {
                     "lua-language-server",
                     "rust-analyzer",
                     "tinymist",
+                    "clangd",
                 },
                 automatic_installation = true,
             })
