@@ -1,5 +1,3 @@
--- install ripgrep and fd
-
 return {
     {
         "nvim-telescope/telescope.nvim",
