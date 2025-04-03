@@ -13,7 +13,7 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.number = true
-vim.opt.wildmode = {"longest", "list"}
+vim.opt.wildmode = { "longest", "list" }
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
@@ -36,6 +36,18 @@ require("which-key").register({
         name = "+code",
         a = { vim.lsp.buf.code_action, "Code Action" },
         d = { vim.lsp.buf.definition, "go to declaration" },
+        l = {
+            function()
+                vim.command("Guard lint")
+            end,
+            "Guard lint"
+        },
+        f = {
+            function()
+                vim.command("Guard fmt")
+            end,
+            "Guard fmt"
+        },
     },
     ["<leader>f"] = {
         name = "telescope",
