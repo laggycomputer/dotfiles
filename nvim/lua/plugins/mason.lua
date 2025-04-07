@@ -24,6 +24,7 @@ return {
                     "rust-analyzer",
                     "tinymist",
                     "clangd",
+                    "typescript-language-server",
                 },
                 automatic_installation = true,
             })

@@ -16,6 +16,8 @@ local opts = {
         'markdown_inline',
         'rust',
         'python',
+        'tsx',
+        'json',
     },
 }
 

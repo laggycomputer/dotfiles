@@ -102,6 +102,11 @@ return {
             lspconfig.clangd.setup {
                 capabilities = capabilities,
             }
+
+            lspconfig.ts_ls.setup {
+                filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+                cmd = { "typescript-language-server", "--stdio" }
+            }
         end
     }
 }
