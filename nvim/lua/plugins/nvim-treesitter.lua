@@ -1,4 +1,12 @@
 local opts = {
+    highlight = {
+        enable = true,
+        disable = {},
+    },
+    indent = {
+        enable = true,
+        disable = {},
+    },
     ensure_installed = {
         'lua',
         'vim',
