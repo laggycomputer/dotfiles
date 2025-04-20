@@ -48,6 +48,7 @@ require("which-key").register({
             end,
             "Guard fmt"
         },
+        r = { vim.lsp.buf.rename, "refactor rename" },
     },
     ["<leader>f"] = {
         name = "telescope",
@@ -55,5 +56,6 @@ require("which-key").register({
         g = { telescope_builtin.live_grep, "telescope live grep" },
         b = { telescope_builtin.buffers, "telescope buffers" },
         h = { telescope_builtin.help_tags, "telescope help tags" },
+        u = { telescope_builtin.lsp_workspace_symbols, "telescope symbol usages" },
     },
 })
