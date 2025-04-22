@@ -35,7 +35,10 @@ require("which-key").register({
     ["<leader>c"] = {
         name = "+code",
         a = { vim.lsp.buf.code_action, "Code Action" },
-        d = { vim.lsp.buf.definition, "go to declaration" },
+        D = { vim.lsp.buf.definition, "go to defintion" },
+        d = { vim.lsp.buf.declaration, "go to declaration" },
+        b = { vim.lsp.buf.type_definition, "go to type definition" },
+        i = { vim.lsp.buf.implementation, "go to implementation(s)" },
         l = {
             function()
                 vim.command("Guard lint")
