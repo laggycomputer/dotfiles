@@ -25,6 +25,7 @@ return {
                     "tinymist",
                     "clangd",
                     "typescript-language-server",
+                    "astro-language-server",
                 },
                 automatic_installation = true,
             })
