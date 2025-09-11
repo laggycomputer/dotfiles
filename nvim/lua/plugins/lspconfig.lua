@@ -112,6 +112,11 @@ return {
             lspconfig['astro'].setup({
                 capabilities = capabilities,
             })
+
+            -- in R: install.packages("languageserver")
+            lspconfig['r_language_server'].setup({
+                capabilities = capabilities
+            })
         end
     }
 }
