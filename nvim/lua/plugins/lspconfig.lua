@@ -8,18 +8,16 @@ return {
             local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
             -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-            local lspconfig = require('lspconfig')
-            --
-            lspconfig['lua_ls'].setup {
+            vim.lsp.config('lua_ls').setup({
                 capabilities = capabilities,
                 Lua = {
                     hint = {
                         enable = true,
                     }
                 },
-            }
+            })
 
-            lspconfig['rust_analyzer'].setup{
+            vim.lsp.config('rust_analyzer').setup{
                 capabilities = capabilities,
                 on_attach = function(client, bufnr)
                     if client.server_capabilities.inlayHintProvider then
@@ -70,7 +68,7 @@ return {
                 }
             }
 
-            lspconfig.pylyzer.setup({
+            vim.lsp.config("pylyzer").setup({
                 capabilities = capabilities,
                 settings = {
                     python = {
@@ -90,7 +88,7 @@ return {
                 end,
             })
 
-            lspconfig["tinymist"].setup {
+            vim.lsp.config("tinymist").setup {
                 capabilities = capabilities,
                 settings = {
                     formatterMode = "typstyle",
@@ -99,22 +97,22 @@ return {
                 }
             }
 
-            lspconfig.clangd.setup {
+            vim.lsp.config("clangd").setup {
                 capabilities = capabilities,
             }
 
-            lspconfig.ts_ls.setup {
+            vim.lsp.config("ts_ls").setup {
                 filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
                 cmd = { "typescript-language-server", "--stdio" }
             }
 
             -- npm i -g @astrojs/language-server
-            lspconfig['astro'].setup({
+            vim.lsp.config('astro').setup({
                 capabilities = capabilities,
             })
 
             -- in R: install.packages("languageserver")
-            lspconfig['r_language_server'].setup({
+            vim.lsp.config('r_language_server').setup({
                 capabilities = capabilities
             })
         end
