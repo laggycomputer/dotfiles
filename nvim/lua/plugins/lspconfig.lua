@@ -8,7 +8,7 @@ return {
             local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
             -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-            vim.lsp.config('lua_ls').setup({
+            vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
                 Lua = {
                     hint = {
@@ -17,7 +17,7 @@ return {
                 },
             })
 
-            vim.lsp.config('rust_analyzer').setup{
+            vim.lsp.config('rust_analyzer', {
                 capabilities = capabilities,
                 on_attach = function(client, bufnr)
                     if client.server_capabilities.inlayHintProvider then
@@ -66,9 +66,9 @@ return {
                         },
                     }
                 }
-            }
+            })
 
-            vim.lsp.config("pylyzer").setup({
+            vim.lsp.config("pylyzer", {
                 capabilities = capabilities,
                 settings = {
                     python = {
@@ -88,31 +88,31 @@ return {
                 end,
             })
 
-            vim.lsp.config("tinymist").setup {
+            vim.lsp.config("tinymist", {
                 capabilities = capabilities,
                 settings = {
                     formatterMode = "typstyle",
                     exportPdf = "onType",
                     semanticTokens = "disable"
                 }
-            }
+            })
 
-            vim.lsp.config("clangd").setup {
+            vim.lsp.config("clangd", {
                 capabilities = capabilities,
-            }
+            })
 
-            vim.lsp.config("ts_ls").setup {
+            vim.lsp.config("ts_ls", {
                 filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
                 cmd = { "typescript-language-server", "--stdio" }
-            }
+            })
 
             -- npm i -g @astrojs/language-server
-            vim.lsp.config('astro').setup({
+            vim.lsp.config('astro', {
                 capabilities = capabilities,
             })
 
             -- in R: install.packages("languageserver")
-            vim.lsp.config('r_language_server').setup({
+            vim.lsp.config('r_language_server', {
                 capabilities = capabilities
             })
         end
