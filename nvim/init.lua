@@ -62,3 +62,10 @@ require("which-key").register({
         u = { telescope_builtin.lsp_workspace_symbols, "telescope symbol usages" },
     },
 })
+
+vim.filetype.add({
+    extension = {
+        tpp = "cpp",
+    },
+})
+
