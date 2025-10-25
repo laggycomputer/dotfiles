@@ -52,6 +52,7 @@ require("which-key").register({
             "Guard fmt"
         },
         r = { vim.lsp.buf.rename, "refactor rename" },
+        R = { vim.lsp.buf.references, "references" },
     },
     ["<leader>f"] = {
         name = "telescope",
