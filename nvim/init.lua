@@ -15,7 +15,7 @@ vim.opt.autoindent = true
 vim.opt.number = true
 vim.opt.wildmode = { "longest", "list" }
 vim.opt.relativenumber = true
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append("unnamedplus")
 vim.opt.cursorline = true
 vim.opt.ttyfast = true
 vim.opt.spell = false
