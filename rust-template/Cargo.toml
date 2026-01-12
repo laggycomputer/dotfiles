@@ -28,7 +28,8 @@ macro_use_extern_crate = "deny"
 map_unit_fn = "deny"
 missing_docs = "deny"
 # don't become the very thing (C++ diamond problem) you swore to destroy
-multiple_supertrait_upcastable = "warn"
+# i'm dreaming of a stabilized christmas
+# multiple_supertrait_upcastable = "warn"
 must_not_suspend = "warn"
 non_ascii_idents = "deny"
 redundant_imports = "deny"
