@@ -8,10 +8,11 @@ publish = false
 
 [dependencies]
 
-[profile.release]
+[profile.release_extra]
+inherits = "release"
 lto = "fat"
 codegen-units = 1
-# debug = "full"
+debug = "full"
 
 [lints.rust]
 ambiguous_negative_literals = "warn"
