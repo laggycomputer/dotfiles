@@ -32,6 +32,10 @@ vim.cmd([[colorscheme habamax]])
 local telescope_builtin = require("telescope.builtin")
 
 require("which-key").register({
+    ["gr"] = {
+        D = { vim.lsp.buf.definition, "go to defintion" },
+        d = { vim.lsp.buf.declaration, "go to declaration" },
+    },
     ["<leader>f"] = {
         name = "telescope",
         f = { telescope_builtin.find_files, "telescope find files" },
