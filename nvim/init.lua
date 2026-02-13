@@ -39,7 +39,7 @@ require("which-key").add({
     { "<leader>fg", telescope_builtin.live_grep, desc = "telescope live grep" },
     { "<leader>fb", telescope_builtin.buffers, desc = "telescope buffers" },
     { "<header>fh", telescope_builtin.help_tags, desc = "telescope help tags" },
-    { "<leader>fu", telescope_builtin.lsp_workspace_symbols, desc = "telescope symbol usages" },
+    { "<leader>fs", telescope_builtin.lsp_workspace_symbols, desc = "telescope symbol usages" },
 })
 
 vim.filetype.add({
