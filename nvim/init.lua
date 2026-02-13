@@ -31,19 +31,15 @@ vim.cmd([[colorscheme habamax]])
 
 local telescope_builtin = require("telescope.builtin")
 
-require("which-key").register({
-    ["gr"] = {
-        D = { vim.lsp.buf.definition, "go to defintion" },
-        d = { vim.lsp.buf.declaration, "go to declaration" },
-    },
-    ["<leader>f"] = {
-        name = "telescope",
-        f = { telescope_builtin.find_files, "telescope find files" },
-        g = { telescope_builtin.live_grep, "telescope live grep" },
-        b = { telescope_builtin.buffers, "telescope buffers" },
-        h = { telescope_builtin.help_tags, "telescope help tags" },
-        u = { telescope_builtin.lsp_workspace_symbols, "telescope symbol usages" },
-    },
+require("which-key").add({
+    { "grD", vim.lsp.buf.definition, desc = "go to defintion" },
+    { "grd", vim.lsp.buf.declaration, desc = "go to declaration" },
+    { "<leader>f", group = "telescope" },
+    { "<leader>ff", telescope_builtin.find_files, desc = "telescope find files" },
+    { "<leader>fg", telescope_builtin.live_grep, desc = "telescope live grep" },
+    { "<leader>fb", telescope_builtin.buffers, desc = "telescope buffers" },
+    { "<header>fh", telescope_builtin.help_tags, desc = "telescope help tags" },
+    { "<leader>fu", telescope_builtin.lsp_workspace_symbols, desc = "telescope symbol usages" },
 })
 
 vim.filetype.add({
