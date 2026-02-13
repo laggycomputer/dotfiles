@@ -4,7 +4,6 @@ require("config.lazy")
 
 vim.opt.compatible = false
 vim.opt.showmatch = true
-vim.opt.mouse = "v"
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.tabstop = 4
