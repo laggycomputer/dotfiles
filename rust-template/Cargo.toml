@@ -13,7 +13,6 @@ publish = false
 
 [dependencies]
 
-# [workspace.profile.release_extra]
 [profile.release_extra]
 inherits = "release"
 lto = "fat"
