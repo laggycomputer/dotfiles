@@ -115,6 +115,10 @@ return {
                 capabilities = capabilities,
             })
             vim.lsp.enable("astro")
+
+            vim.lsp.enable("zls", {
+                capabilities = capabilities,
+            })
         end
     }
 }

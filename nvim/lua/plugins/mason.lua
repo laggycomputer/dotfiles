@@ -26,6 +26,7 @@ return {
                     "clangd",
                     "typescript-language-server",
                     "astro-language-server",
+                    "zls",
                 },
                 automatic_installation = true,
             })
