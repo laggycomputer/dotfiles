@@ -195,3 +195,6 @@ verbose_bit_mask = "warn"
 verbose_file_reads = "warn"
 wildcard_dependencies = "deny"
 zero_sized_map_values = "deny"
+
+[lints.rustdoc]
+broken_intra_doc_links = "deny"
