@@ -2,6 +2,8 @@ alias pls="sudo"
 alias up="cd ../"
 alias sl="sl -e"
 
+RUSTFLAGS="-C target-cpu=native"
+
 eval "$(zoxide init bash)"
 eval "$(oh-my-posh init bash --config ~/.omp.json)"
 export EDITOR=nvim
